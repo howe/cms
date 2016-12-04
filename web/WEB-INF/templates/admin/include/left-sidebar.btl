@@ -1,0 +1,33 @@
+<div class="be-left-sidebar" style="font-family: 'Arial','Microsoft YaHei','黑体','宋体',sans-serif;">
+    <div class="left-sidebar-wrapper">
+        <div class="left-sidebar-spacer">
+            <div class="left-sidebar-scroll">
+                <div class="left-sidebar-content">
+                    <ul class="sidebar-elements">
+                        <li class="<%if(tag == 'index'){%>active<%}%>"><a href="/"><i class="icon mdi mdi-home"></i><span>系统主页</span></a>
+                        </li>
+                        <li class="parent <%if(tag=='notice-list' || tag=='notice-add' || tag=='help-list' || tag=='help-add' || tag=='explain-add' || tag=='explain-list'){%>active<%}%>"><a href="javascript:void(0);"><i class="icon mdi mdi-layers"></i><span>资讯管理</span></a>
+                            <ul class="sub-menu">
+                                <li class="<%if(tag=='notice-list'){%>active<%}%>"><a href="/admin/notice/list.htm">公告列表</a></li>
+                                <li class="<%if(tag=='notice-add'){%>active<%}%>"><a href="/admin/notice/add.htm">添加公告</a></li>
+                                <li class="<%if(tag=='help-list'){%>active<%}%>"><a href="/admin/help/list.htm">帮助列表</a></li>
+                                <li class="<%if(tag=='help-add'){%>active<%}%>"><a href="/admin/help/add.htm">添加帮助</a></li>
+                                <li class="<%if(tag=='explain-list'){%>active<%}%>"><a href="/admin/explain/list.htm">活页列表</a></li>
+                                <li class="<%if(tag=='explain-add'){%>active<%}%>"><a href="/admin/explain/add.htm">添加活页</a></li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="parent <%if(tag=='user-info' || tag=='user-loginlogs' || tag=='user-operationlogs'){%>active<%}%>"><a href="javascript:void(0);"><i class="icon mdi mdi-face"></i><span>个人管理</span></a>
+                            <ul class="sub-menu">
+                                <li class="<%if(tag=='user-info'){%>active<%}%>"><a href="/admin/user/info.htm">个人信息</a></li>
+                                <li class="<%if(tag=='user-loginlogs'){%>active<%}%>"><a href="/admin/user/loginlogs.htm">登录日志</a></li>
+                                <li class="<%if(tag=='user-operationlogs'){%>active<%}%>"><a href="/admin/user/operationlogs.htm">操作日志</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/admin/logout.htm"><i class="icon mdi mdi-power"></i><span>退出系统</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

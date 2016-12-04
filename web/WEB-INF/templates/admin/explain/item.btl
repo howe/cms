@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="description"
+          content="【易兑换服务中心】是重磅推出的在线支付平台，其安全可靠、方便快捷为最大的特点，轻松实现手机付款、在线转账、在线付款，兑换卡服务中心是您的不二之选，欢迎咨询易兑换服务中心。"/>
+    <meta name="keywords" content="易兑换服务中心,兑换卡,易兑换,充值易兑换,手机充值易兑换Q币"/>
+    <meta name="author" content="yiduihuan.net"/>
+    <meta name="description" content="易兑换服务中心"/>
+    <title>修改活页 - 易兑换服务中心</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://ofpm0ksx5.qnssl.com/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/jquery.perfect-scrollbar/0.6.12/css/perfect-scrollbar.css"/>
+    <link rel="stylesheet" type="text/css" href="https://ofpm0ksx5.qnssl.com/css/material-design-iconic-font.css"/>
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="https://ofpm0ksx5.qnssl.com/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/nice-validator/1.0.7/jquery.validator.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/jquery-impromptu/6.2.3/jquery-impromptu.min.css" />
+    <script charset="utf-8" lang="zh" language="javascript">
+        document.onkeydown = function (event) {
+            e = event ? event : (window.event ? window.event : null);
+            if (e.keyCode == 13) {
+                document.getElementById("saveBtn").click();
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="be-wrapper be-fixed-sidebar">
+    <%include("/admin/include/head-navbar.btl"){}%>
+    <%include("/admin/include/left-sidebar.btl", {tag: 'explain-list'}){}%>
+    <div class="be-content">
+        <div class="page-head">
+            <ol class="breadcrumb page-head-nav">
+                <li><a href="/admin/index.htm">主页</a></li>
+                <li><a href="javascript:void(0);">资讯管理</a></li>
+                <li class="active">修改活页</li>
+            </ol>
+        </div>
+        <div class="main-content" style="min-height:650px">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default panel-border-color panel-border-color-primary">
+                        <div class="panel-body">
+                            <form action="/admin/explain/modify.htm" id="modifyForm" method="post" autocomplete="off" style="border-radius: 0px;" class="form-horizontal group-border-dashed" data-validator-option="{theme:'yellow_right_effect',stopOnError:true}">
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">活页标题</label>
+                                    <div class="col-sm-6">
+                                        <input id="id" name="id" type="hidden" value="${obj.explain.id}" />
+                                        <input type="text" id="title" name="title" class="form-control" maxlength="50" value="${obj.explain.title}" placeholder="请输入活页标题..." data-rule="活页标题:required;"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">是否显示</label>
+                                    <div class="col-sm-6">
+                                        <div class="be-radio">
+                                            <input type="hidden" id="display" name="display" value="${obj.explain.display}" />
+                                            <input type="radio" name="rad" id="rad1" value="1" /><label for="rad1">显示</label>
+                                            <input type="radio" name="rad" id="rad2" value="0" /><label for="rad2">隐藏</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">发布时间</label>
+                                    <div class="col-sm-6">
+                                        <div class="input-group date datetimepicker col-md-5 col-xs-7">
+                                            <input readonly="readonly" type="text" placeholder="请输入发布时间..." data-rule="发布时间:required;" id="releaseTime" name="releaseTime" class="form-control" value='${obj.explain.releaseTime.format("yyyy-MM-dd HH:mm:ss")}' onfocus="WdatePicker({skin:'twoer',dateFmt:'yyyy-MM-dd HH:mm:ss',minDate:'2016-10-01 00:00:00',maxDate:'%y-%M-%d %H:%m:%s'})" />
+                                            <span class="input-group-addon btn btn-primary"><i class="icon-th mdi mdi-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button type="submit" class="btn btn-primary btn-space" id="saveBtn"> 保 存 </button>
+                                        <a class="btn btn-default btn-space" href="/admin/explain/list.htm"> 返 回 </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%include("/admin/include/foot.btl"){}%>
+    </div>
+</div>
+<script language="javascript" type="text/javascript" src="https://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdn.bootcss.com/jquery.perfect-scrollbar/0.6.12/js/perfect-scrollbar.jquery.js"></script>
+<script language="javascript" type="text/javascript" src="https://ofpm0ksx5.qnssl.com/js/main.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdn.bootcss.com/bootstrap-markdown/2.10.0/js/bootstrap-markdown.js"></script>
+<script language="javascript" type="text/javascript" src="https://ofpm0ksx5.qnssl.com/js/bootstrap-markdown.zh.js"></script>
+<script language="javascript" type="text/javascript" src="https://ofpm0ksx5.qnssl.com/js/markdown.js"></script>
+<script language="javascript" type="text/javascript" src="https://ofpm0ksx5.qnssl.com/js/datepicker/WdatePicker.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdn.bootcss.com/nice-validator/1.0.7/jquery.validator.js"></script>
+<script language="javascript" type="text/javascript" src="https://o25sdbf05.qnssl.com/js/jquery.validator.lang.zh-CN.js?v=1.0.7"></script>
+<script language="javascript" type="text/javascript" src="https://cdn.bootcss.com/jquery-impromptu/6.2.3/jquery-impromptu.min.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        jQuery("input[name=rad][value=${obj.explain.display}]").attr("checked",'checked');
+        App.init();
+    });
+    jQuery("input[name=rad]").click(function(){jQuery("#display").val(jQuery("input[name='rad']:checked").val());});
+</script>
+<script language="javascript" charset="utf-8">
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+    if (getUrlParam("alert") == 'error'){
+        jQuery(document).ready(function () {
+            $.prompt("操作失败", {
+                buttons: {"朕知道了": true}, submit: function () {
+                    location.href = "/admin/explain/item-${obj.explain.id}.htm";
+                }
+            });
+        });
+    }
+    if (getUrlParam("alert") == 'success'){
+        jQuery(document).ready(function () {
+            $.prompt("操作成功", {
+                buttons: {"朕知道了": true}, submit: function () {
+                    location.href = "/admin/explain/list.htm";
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<div class="mod sidebar">
+    <div class="mod-title">
+        <h3>分类</h3>
+    </div>
+    <ul class="mod-content">
+        <li <%if(tag == 5){%>class="active"<%}%>>
+            <a href="/help/list-5.htm">卡类介绍</a>
+        </li>
+        <li <%if(tag == 2){%>class="active"<%}%>>
+            <a href="/help/list-2.htm">兑换常见问题</a>
+        </li>
+        <li <%if(tag == 3){%>class="active"<%}%>>
+            <a href="/help/list-3.htm">资金安全</a>
+        </li>
+        <li <%if(tag == 4){%>class="active"<%}%>>
+            <a href="/help/list-4.htm">交易查询</a>
+        </li>
+        <li <%if(tag == 1){%>class="active"<%}%>>
+            <a href="/help/list-1.htm">服务协议</a>
+        </li>
+        <li <%if(tag == 6){%>class="active"<%}%>>
+            <a href="/help/list-6.htm">关于我们</a>
+        </li>
+    </ul>
+</div>

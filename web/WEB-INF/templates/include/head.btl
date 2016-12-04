@@ -1,0 +1,12 @@
+<%directive dynamic;%>
+<header class="header">
+    <div class="header-wrap clearfix">
+        <h1 class="logo"><a href="/">易兑换 卡类兑换服务中心</a></h1>
+        <span class="logo-slogan"><%if(tag == 'help'){%>帮助中心<%}else if(tag == 'notice'){%>网站公告<%}else if(tag == 'index'){%>其他内容<%}else{%> <%}%></span>
+        <nav class="header-nav">
+            <a href="/" <%if(tag == 'index'){%>class="current"<%}%>>首页</a>
+            <a href="/help/index.htm" <%if(tag == 'help'){%>class="current"<%}%>>帮助中心</a>
+            <a href="/notice/index.htm" <%if(tag == 'notice'){%>class="current"<%}%>>网站公告</a>
+        </nav>
+    </div>
+</header>

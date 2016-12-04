@@ -1,0 +1,41 @@
+<footer class="footer">
+    <div class="grid1000 footer-inner">
+        <p class="links">
+            <a href="/" target="_blank">关于易兑换</a>
+            <span class="split">|</span>
+            <a href="/" target="_blank">联系我们</a>
+            <span class="split">|</span>
+            <a href="/" target="_blank">帮助公告</a>
+            <span class="split">|</span>
+            <a href="/" target="_blank">开放接口</a>
+            <span class="split">|</span>
+            <a href="/" target="_blank">诚聘英才</a>
+        </p>
+        <p><span class="mr10">Copyright &copy; 2013-2016 All Rights Reserved.</span><span class="mr10">易兑换版权所有</span><span class="mr20">苏B2-20160445</span><span class="mr10">苏ICP备15029790号-11</span></p>
+    </div>
+</footer>
+<a href="http://wpa.qq.com/msgrd?v=3&uin=100110566&site=qq&menu=yes" target="_blank" id="g-online-service" title="联系在线客服">
+    <span class="J_close close-btn" id="g-online-service-close" title="鼠标移此关闭">x</span>
+    <span class="J_close up-btn" id="g-online-service-up" title="鼠标移此向上">↑</span>
+</a>
+<div style="display: none;"><script language="javascript" type="text/javascript" src="https://s11.cnzz.com/z_stat.php?id=1259918374&web_id=1259918374"></script></div>
+<script language="javascript" type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script language="javascript" charset="utf-8">
+jQuery("#g-online-service-close").mouseenter(function () {
+    jQuery("#g-online-service").attr("href","javascript:void(0);");
+});
+jQuery("#g-online-service-close").mouseleave(function () {
+    jQuery("#g-online-service").attr("href","http://wpa.qq.com/msgrd?v=3&uin=100110566&site=qq&menu=yes");
+});
+jQuery("#g-online-service-close").click(function(){
+    jQuery("#g-online-service").attr("href","javascript:void(0);");
+    jQuery("#g-online-service").hide();
+});
+jQuery("#g-online-service-up").mouseenter(function () {
+    jQuery("#g-online-service").attr("href","javascript:void(0);");
+    jQuery('body,html').animate({scrollTop:0},1000);
+});
+jQuery("#g-online-service-up").mouseleave(function () {
+    jQuery("#g-online-service").attr("href","http://wpa.qq.com/msgrd?v=3&uin=100110566&site=qq&menu=yes");
+});
+</script>

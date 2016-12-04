@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="description"
+          content="【易兑换服务中心】是重磅推出的在线支付平台，其安全可靠、方便快捷为最大的特点，轻松实现手机付款、在线转账、在线付款，兑换卡服务中心是您的不二之选，欢迎咨询易兑换服务中心。"/>
+    <meta name="keywords" content="易兑换服务中心,兑换卡,易兑换,充值易兑换,手机充值易兑换Q币"/>
+    <meta name="author" content="yiduihuan.net"/>
+    <meta name="description" content="易兑换服务中心"/>
+    <title>操作日志 - 易兑换服务中心</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://ofpm0ksx5.qnssl.com/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/jquery.perfect-scrollbar/0.6.12/css/perfect-scrollbar.css"/>
+    <link rel="stylesheet" type="text/css" href="https://ofpm0ksx5.qnssl.com/css/material-design-iconic-font.css"/>
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="https://ofpm0ksx5.qnssl.com/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/datatables/1.10.12/css/dataTables.bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/jquery-impromptu/6.2.3/jquery-impromptu.min.css" />
+</head>
+<body>
+<div class="be-wrapper be-fixed-sidebar">
+    <%include("/admin/include/head-navbar.btl"){}%>
+    <%include("/admin/include/left-sidebar.btl", {tag: 'user-operationlogs'}){}%>
+    <div class="be-content">
+        <div class="page-head">
+            <ol class="breadcrumb page-head-nav">
+                <li><a href="/admin/index.htm">主页</a></li>
+                <li><a href="javascript:void(0);">个人管理</a></li>
+                <li class="active">操作日志</li>
+            </ol>
+        </div>
+        <div class="main-content" style="min-height:650px">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="panel panel-default panel-table">
+                        <div class="panel-body">
+                            <table id="date-table" class="table table-striped table-hover table-fw-widget">
+                                <thead>
+                                    <tr>
+                                        <th>操作动作</th>
+                                        <th>设备信息</th>
+                                        <th>登录IP地址</th>
+                                        <th>登录时间</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <%for (log in obj.operLogsList){%>
+                                    <tr class="grade">
+                                        <td class="center">${log.action}</td>
+                                        <td class="center">${log.agent}</td>
+                                        <td class="center"><a href="http://www.ip.cn/ip-${log.ip}.html" title="查看IP来源" target="_blank">${log.ip}</a></td>
+                                        <td class="center">${log.operDate, dateFormat="yyyy-MM-dd HH:mm:ss"}</td>
+                                    </tr>
+                                <%}%>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%include("/include/foot.btl"){}%>
+    </div>
+</div>
+<script language="javascript" type="text/javascript" src="https://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdn.bootcss.com/jquery.perfect-scrollbar/0.6.12/js/perfect-scrollbar.jquery.js"></script>
+<script language="javascript" type="text/javascript" src="https://ofpm0ksx5.qnssl.com/js/main.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdn.bootcss.com/datatables/1.10.12/js/jquery.dataTables.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdn.bootcss.com/datatables/1.10.12/js/dataTables.bootstrap.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdn.bootcss.com/jquery-impromptu/6.2.3/jquery-impromptu.min.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function(){ App.init(); });
+    jQuery(document).ready(function() {
+        jQuery('#date-table').DataTable({
+            "order": [[ 3, "desc" ]],
+            "pageLength": 15,
+            "searching": false,
+            "lengthChange": false,
+            "lengthMenu": [ 15, 25, 50, 75, 100 ],
+            "ordering": false,
+            "language": {
+                "url": "https://o25swsets.qnssl.com/js/Chinese.json"
+            }
+        });
+    });
+</script>
+</body>
+</html>
