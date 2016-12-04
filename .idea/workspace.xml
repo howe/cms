@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55ff0709-0c46-45fb-bd20-f01c4a97b39a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/yiduihuan/module/ControlModule.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/yiduihuan/module/ControlModule.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/yiduihuan/module/ExplainModule.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/yiduihuan/module/ExplainModule.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/yiduihuan/module/HelpModule.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/yiduihuan/module/HelpModule.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/yiduihuan/module/NoticeModule.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/yiduihuan/module/NoticeModule.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/yiduihuan/module/UserModule.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/yiduihuan/module/UserModule.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/yiduihuan/module/ControlModule.java" afterPath="$PROJECT_DIR$/src/com/yiduihuan/module/ControlModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/yiduihuan/module/ExplainModule.java" afterPath="$PROJECT_DIR$/src/com/yiduihuan/module/ExplainModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/yiduihuan/module/HelpModule.java" afterPath="$PROJECT_DIR$/src/com/yiduihuan/module/HelpModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/yiduihuan/module/NoticeModule.java" afterPath="$PROJECT_DIR$/src/com/yiduihuan/module/NoticeModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/yiduihuan/module/UserModule.java" afterPath="$PROJECT_DIR$/src/com/yiduihuan/module/UserModule.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,7 +17,7 @@
     <option name="PARALLEL_COMPILATION" value="true" />
   </component>
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+    <option name="PATCH_PATH" value="E:\IdeaProjects\cms" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -611,16 +601,24 @@
       <workItem from="1480766039264" duration="5956000" />
       <workItem from="1480815988136" duration="4104000" />
       <workItem from="1480842813928" duration="11000" />
-      <workItem from="1480842831110" duration="98000" />
+      <workItem from="1480842831110" duration="141000" />
     </task>
+    <task id="LOCAL-00001" summary="修復一個dao的bug">
+      <created>1480842964492</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1480842964492</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10169000" />
+    <option name="totallyTimeSpent" value="10212000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -655,6 +653,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修復一個dao的bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修復一個dao的bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
