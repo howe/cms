@@ -21,7 +21,7 @@ import org.nutz.mvc.annotation.*;
 import org.nutz.mvc.filter.CheckSession;
 import org.nutz.service.EntityService;
 
-@IocBean
+@IocBean(fields = {"dao"})
 @Ok("json:{locked:'password|salt', ignoreNull:true}")
 @Fail("http:500")
 public class UserModule extends EntityService<User> {

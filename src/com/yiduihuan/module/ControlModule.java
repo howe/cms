@@ -22,7 +22,7 @@ import java.util.Map;
 
 import static com.yiduihuan.tool.SessionManger.USER_SESSION_KEY;
 
-@IocBean
+@IocBean(fields = {"dao"})
 @Ok("json:{locked:'password|salt', ignoreNull:true}")
 @Fail("http:500")
 public class ControlModule extends EntityService<User> {

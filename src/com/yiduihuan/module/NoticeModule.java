@@ -22,7 +22,7 @@ import org.nutz.mvc.filter.CheckSession;
 import org.nutz.service.EntityService;
 import com.yiduihuan.bean.Notice;
 
-@IocBean
+@IocBean(fields = {"dao"})
 @Ok("json:{locked:'password|salt', ignoreNull:true}")
 @Fail("http:500")
 public class NoticeModule extends EntityService<Notice> {
